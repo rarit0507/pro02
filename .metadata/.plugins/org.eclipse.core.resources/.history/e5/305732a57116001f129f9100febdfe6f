@@ -1,0 +1,9 @@
+package com.pro02.dto;
+
+import lombok.Getter;
+
+public class Sample {
+	private int num;
+	private String title;
+	private int regdate;
+}
