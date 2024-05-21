@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.pro02.myapp">
+	<logger name="com.starbucks.myapp">
 		<level value="info" />
 	</logger>
 	

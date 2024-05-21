@@ -20,7 +20,7 @@
 	<!-- 데이터 소스 및 드라이버 설정 : log4jdbc-log4j2-jdbc4-1.16.jar -->
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
 	<!-- 연결 url, 사용자 아이디, 비밀번호 설정  -->
-		<property name="url" value="jdbc:mysql://localhost:3306/company?serverTimezone=UTC" />
+		<property name="url" value="jdbc:mysql://localhost:3306/pro02?serverTimezone=UTC" />
 		<property name="username" value="root" />
 		<property name="password" value="1234"></property>
 	</bean>

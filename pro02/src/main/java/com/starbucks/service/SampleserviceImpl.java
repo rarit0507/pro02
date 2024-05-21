@@ -9,11 +9,11 @@ import com.starbucks.dao.SampleDAO;
 import com.starbucks.dto.Sample;
 
 @Service
-public class SampleserviceImpl implements SampleService {
+public class SampleServiceImpl implements SampleService {
 
 	@Autowired
 	private SampleDAO sampleDAO;
-
+	
 	@Override
 	public List<Sample> getSampleList() {
 		return sampleDAO.getSampleList();
@@ -31,13 +31,11 @@ public class SampleserviceImpl implements SampleService {
 
 	@Override
 	public void upSample(Sample sample) {
-		sampleDAO.upSample(sample);
+		sampleDAO.upSample(sample);		
 	}
 
 	@Override
 	public void delSample(Sample sample) {
-		sampleDAO.delSample(sample);
-	}
-
-	
+		sampleDAO.delSample(sample);		
+	}	
 }
