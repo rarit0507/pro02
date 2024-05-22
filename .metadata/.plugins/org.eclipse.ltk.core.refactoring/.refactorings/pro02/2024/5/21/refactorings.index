@@ -35,3 +35,98 @@
 1716275079942	Copy file
 1716275087461	Copy file
 1716275095253	Delete element
+1716339676772	Copy compilation unit
+1716339691506	Rename type 'free'
+1716340722500	Delete element
+1716340729280	Delete elements
+1716340741287	Delete elements
+1716340747095	Delete element
+1716340762031	Delete element
+1716340799852	Copy compilation unit
+1716340810137	Rename type 'fileboard'
+1716340853726	Copy compilation unit
+1716340860810	Rename type 'qna'
+1716340924717	Copy compilation unit
+1716341277531	Copy compilation unit
+1716341446678	Copy compilation unit
+1716341812483	Copy compilation unit
+1716342002921	Copy compilation unit
+1716342030013	Copy compilation unit
+1716342039334	Copy compilation unit
+1716342046735	Copy compilation unit
+1716342054899	Copy compilation unit
+1716342067530	Copy compilation unit
+1716342079973	Copy compilation unit
+1716342086200	Copy compilation unit
+1716342092267	Rename type 'QnaDAO2'
+1716342100944	Copy compilation unit
+1716342110012	Copy compilation unit
+1716342119595	Rename type 'ProductDAO2'
+1716342128643	Copy compilation unit
+1716342137774	Rename type 'ProductDAOImpl2'
+1716342149897	Copy compilation unit
+1716342163446	Copy compilation unit
+1716342180090	Copy compilation unit
+1716342187193	Copy compilation unit
+1716342197476	Copy compilation unit
+1716342212517	Copy compilation unit
+1716342246272	Copy compilation units
+1716342267315	Rename type 'BasketDAO'
+1716342274038	Rename type 'BasketDAOImpl'
+1716342280419	Rename type 'BoardDAO'
+1716342285977	Rename type 'FileboardDAO'
+1716342291262	Rename type 'FileboardDAOImpl'
+1716342295067	Rename type 'FreeDAO'
+1716342299696	Rename type 'InventoryDAO'
+1716342314067	Rename type 'BoardDAOImpl'
+1716342320320	Rename type 'FreeDAOImpl'
+1716342324829	Rename type 'InventoryDAOImpl'
+1716342328523	Rename type 'MemberDAO'
+1716342332643	Rename type 'MemberDAOImpl'
+1716342338081	Rename type 'ProductDAO'
+1716342343166	Rename type 'QnaDAO'
+1716342347943	Rename type 'SalesDAO'
+1716342355993	Rename type 'SalesDAOImpl'
+1716342363591	Rename type 'ProductDAOImpl'
+1716342369138	Rename type 'QnaDAOImpl'
+1716342580713	Copy compilation unit
+1716342585298	Rename type 'BoardController2'
+1716342606734	Copy compilation units
+1716342642708	Copy compilation units
+1716342661116	Copy compilation unit
+1716355208846	Rename package 'com.starbucks.dao'
+1716355504876	Delete element
+1716355509810	Delete element
+1716355514899	Delete element
+1716355519811	Delete element
+1716355584820	Delete elements
+1716355605838	Rename type 'BasketDAO'
+1716355623261	Rename type 'FileboardDAO'
+1716355628076	Rename type 'FreeDAO'
+1716355632122	Rename type 'InventoryDAO'
+1716355637474	Rename type 'MemberDAO'
+1716355641621	Rename type 'ProductDAO'
+1716355645879	Rename type 'QnaDAO'
+1716355649197	Rename type 'SalesDAO'
+1716355870889	Rename package 'com.starbucks.service'
+1716355897327	Rename type 'BasketService'
+1716355902579	Rename type 'BoardService'
+1716355907981	Rename type 'FileboardService'
+1716355916263	Rename type 'FreeService'
+1716355920522	Rename type 'InventoryService'
+1716355924934	Rename type 'MemberService'
+1716355928238	Rename type 'ProductService'
+1716355932126	Rename type 'QnaService'
+1716355936349	Rename type 'SalesService'
+1716355942120	Rename type 'SalesServiceImpl'
+1716355947226	Rename type 'QnaServiceImpl'
+1716355952028	Rename type 'ProductServiceImpl'
+1716355956777	Rename type 'MemberServiceImpl'
+1716355961828	Rename type 'InventoryServiceImpl'
+1716355965861	Rename type 'FreeServiceImpl'
+1716355970003	Rename type 'FileboardServiceImpl'
+1716355978321	Rename type 'BoardServiceImpl'
+1716355984314	Rename type 'BasketServiceImpl'
+1716356284338	Rename package 'com.starbucks.dto'
+1716356568756	Copy compilation unit
+1716364076243	Rename resource 'errorpage.jsp'

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starbucks.per.BoardMapper">
+	<select id="getTotalCount" resultType="int">
+		select count(*) from board
+	</select>	
+	<select id="getBoardList" resultType="com.starbucks.domain.Board">
+		select * from board
+	</select>	
+	<select id="getBoard" resultType="com.starbucks.domain.Board">
+		select * from board where bno=#{bno}
+	</select>	
+	<insert id="insSample">
+		insert into board(title, content)
+		values (#{title}, #{content})
+	</insert>
+	<update id="upBoard">
+	    UPDATE board
+	    SET title = #{title}, content = #{content}
+	    WHERE bno = #{bno};
+	</update>
+	<delete id="delBoard">
+		delete from board where bno=#{bno}
+	</delete>
+	<update id="vcntCount">
+	    UPDATE board
+	    SET vcnt = vcnt + 1
+	    WHERE bno = #{bno};
+	</update>
+</mapper>

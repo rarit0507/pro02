@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 <%@ page import="java.util.*" %>
-<%@ page import="com.starbucks.dto.*" %>
+<%@ page import="com.starbucks.domain.*" %>
 <c:set var="ipath" value="<%=request.getContextPath() %>" />   
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"/> 
 <script src="${ipath }/js/jquery-3.2.1.min.js"></script>
