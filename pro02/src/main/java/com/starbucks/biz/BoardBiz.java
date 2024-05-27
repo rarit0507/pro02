@@ -11,5 +11,5 @@ public interface BoardBiz {
 	public void insBoard(Board board);
 	public void upBoard(Board board);
 	public void delBoard(Board board);
-	public void vcntCount(int bno);	//조회수 증가
+//	public void vcntCount(int bno);	//조회수 증가
 }
