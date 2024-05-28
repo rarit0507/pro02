@@ -15,6 +15,7 @@
 	</listener>
 
 	<!-- 요청 처리 서블릿 설정 : 접근 권한 설정, 리소스 경로 설정-->
+	<!-- 암호화 및 인터셉터 -->
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -22,6 +23,7 @@
 			<param-name>contextConfigLocation</param-name>
 			<param-value>
 				/WEB-INF/spring/appServlet/servlet-context.xml
+				/WEB-INF/spring/spring-security.xml
 			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
@@ -40,9 +42,31 @@
             <param-name>encoding</param-name>
             <param-value>UTF-8</param-value>
         </init-param>
+	    <init-param>
+	        <param-name>forceEncoding</param-name>
+	        <param-value>true</param-value>
+	    </init-param>
     </filter>
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    <!-- PUT, PATCH, DELETE 방식의 메소드를 지원하지 않는 브라우저가 있을 경우 Spring에서 PUT, PATCH, DELETE 를 지원하는 필터 -->
+   	<filter>
+		<filter-name>httpMethodFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+	</filter>
+		<filter-mapping>
+		<filter-name>httpMethodFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- 해당 내용 접근시 로그인이 필요하도록 필터 기능 탑재 -->
+	<filter>
+		<filter-name>loginCheckFilter</filter-name>
+		<filter-class>com.starbucks.filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginCheckFilter</filter-name>
+		<url-pattern>/sales/*</url-pattern>
+	</filter-mapping>    
 </web-app>

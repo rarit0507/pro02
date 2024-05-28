@@ -1,21 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html charset=UTF8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path2" value="${pageContext.request.contextPath }" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<c:set var="path2" value="${pageContext.servletContext.contextPath }" />
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<title>메인 페이지</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>STARBUCKS</title>
+    <jsp:include page="./include/head.jsp"></jsp:include>
 </head>
 <body>
-	<h2>${serverTime }</h2>
-	<h2>${author }</h2>
-	<h2>${company }</h2>
-	<hr>
-	<a href="${path2 }/sample/list.do">샘플 목록</a>	
+<div class="full-wrap">
+	<header id="hd" class="header">
+    	<div class="container">
+			<jsp:include page="./include/hd.jsp"></jsp:include>
+		</div>
+	</header>
+	<main class="contents" id="contents">
+		<section class="page clr-fix" id="page1">
+			<div class="page-wrap">
+				<a href="${path2 }/board/list.do">샘플 목록</a>	
+			</div>
+		</section>	
+	</main>
+	<footer id="ft">
+		<jsp:include page="./include/ft.jsp"></jsp:include>
+	</footer>
+</div>
 </body>
 </html>

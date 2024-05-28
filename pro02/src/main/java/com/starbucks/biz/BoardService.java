@@ -13,45 +13,49 @@ import com.starbucks.per.BoardMapper;
 public class BoardService implements BoardBiz {
 
 	@Autowired
-	private BoardMapper boardMapper;
-
+	private BoardMapper boardDAO;
+	
 	@Override
 	public int getTotalCount() {
-		return boardMapper.getTotalCount();
+		return boardDAO.getTotalCount();
 	}
 
 	@Override
 	public List<Board> getBoardList() {
-		return boardMapper.getBoardList();
+		return boardDAO.getBoardList();
 	}
 
 	@Transactional
 	@Override
 	public Board getBoard(int bno) {
-		boardMapper.vcntCount(bno);		//게시글 불러올 때 한 번에 증가하도록 메서드를 서비스에 넣음. @Transactional 추가 필요
-		return boardMapper.getBoard(bno);
+		boardDAO.vcntCount(bno);
+		return boardDAO.getBoard(bno);
+	}
+	
+	@Override
+	public Board selBoard(int bno) {
+		return boardDAO.getBoard(bno);
 	}
 
 	@Override
 	public void insBoard(Board board) {
-		boardMapper.insBoard(board);		
+		boardDAO.insBoard(board);		
 	}
 
 	@Override
 	public void upBoard(Board board) {
-		boardMapper.upBoard(board);
+		boardDAO.upBoard(board);
 	}
 
 	@Override
-	public void delBoard(Board board) {
-		boardMapper.delBoard(board);
+	public void countUpCnt(int bno) {
+		boardDAO.vcntCount(bno);		
 	}
 
-//	@Override
-//	public void vcntCount(int bno) {
-//		boardMapper.vcntCount(bno);
-//	}
-
+	@Override
+	public void delBoard(int bno) {
+		boardDAO.delBoard(bno);
+	}
 
 	
 }

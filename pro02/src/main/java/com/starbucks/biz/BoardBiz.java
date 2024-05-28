@@ -8,8 +8,9 @@ public interface BoardBiz {
 	public int getTotalCount();
 	public List<Board> getBoardList();
 	public Board getBoard(int bno);
+	public Board selBoard(int bno);
 	public void insBoard(Board board);
 	public void upBoard(Board board);
-	public void delBoard(Board board);
-//	public void vcntCount(int bno);	//조회수 증가
+	public void countUpCnt(int bno);
+	public void delBoard(int bno);
 }

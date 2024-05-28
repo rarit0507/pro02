@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.starbucks.domain.Basket;
-import com.starbucks.per.BasketMapper;
+import com.starbucks.per.BasketDAO;
 
 @Service
 public class BasketService implements BasketBiz {
 
 	@Autowired
-	private BasketMapper basketDAO;
+	private BasketDAO basketDAO;
 
 	@Override
 	public List<Basket> getBasketList() {
@@ -30,18 +30,13 @@ public class BasketService implements BasketBiz {
 	}
 
 	@Override
-	public int maxNum() {
-		return basketDAO.maxNum();
-	}
-
-	@Override
 	public void upBasket(Basket basket) {
 		basketDAO.upBasket(basket);
 	}
 
 	@Override
-	public void delBasket(Basket basket) {
-		basketDAO.delBasket(basket);
+	public void delBasket(int bno) {
+		basketDAO.delBasket(bno);
 	}
 	
 	

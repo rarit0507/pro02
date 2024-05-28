@@ -37,6 +37,18 @@
 		<level value="info" />
 	</logger>
 	
+	<logger name="com.starbucks.filter">
+		<level value="info" />
+	</logger>
+	
+	<logger name="com.starbucks.test">
+		<level value="info" />
+	</logger>
+	
+	<logger name="com.starbucks.util">
+		<level value="info" />
+	</logger>
+	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />

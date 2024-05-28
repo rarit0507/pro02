@@ -12,7 +12,7 @@
 	<select id="getBoard" resultType="com.starbucks.domain.Board">
 		select * from board where bno=#{bno}
 	</select>	
-	<insert id="insSample">
+	<insert id="insBoard">
 		insert into board(title, content)
 		values (#{title}, #{content})
 	</insert>

@@ -1,21 +1,34 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
-<%@ page import="java.util.*" %>
-<%@ page import="com.starbucks.domain.*" %>
-<c:set var="ipath" value="<%=request.getContextPath() %>" />   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"/> 
-<script src="${ipath }/js/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" href="${ipath }/css/bootstrap.min.css" />
-<script src="${ipath }/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="${ipath }/images/favicon.png" />
-<link rel="shortcut icon" href="${ipath }/images/favicon.png" />
-<meta property="og:image" content="${ipath }/images/site.png" />
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path0" value="${pageContext.servletContext.contextPath }" />
+<meta name="subject" content="모닝문구" />
+<meta name="description" content="모닝문구" />
+<meta name="keywords" content="모닝문구, 문구, 팬시, 선물" />
+<link rel="icon" href="${path0}/resources/images/favicon.png" />
+<link rel="shortcut icon" href="${path0}/resources/images/favicon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="morning office" />
+<meta property="og:description" content="모닝문구, 문구, 팬시, 선물" />
+<meta property="og:image" content="${path0}/resources/images/site.png" />
 <meta property="og:url" content="http://localhost:8091" />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<link rel="stylesheet" href="${ipath }/css/common.css" />
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Dorsa&family=Nanum+Gothic&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+<link rel="stylesheet" href="${path0}/resources/css/normalize.css" />
+<link rel="stylesheet" href="${path0}/resources/css/bulma.css">
+<link rel="stylesheet" href="${path0}/resources/css/xeicon.css">
+<link rel="stylesheet" href="${path0}/resources/css/datatables.min.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="${path0}/resources/css/common.css" />
+<script src="${path0}/resources/js/jquery-3.7.1.js"></script>
+<script src="${path0}/resources/js/datatables.min.js"></script>
+<script src="${path0}/resources/js/parallax.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<style>
+/* 공통 사용자 정의 스타일 */
+#ft { border-top:3px solid #369; }
+.control { margin-top:10px; margin-bottom:10px; }
+</style>
