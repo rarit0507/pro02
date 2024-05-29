@@ -50,7 +50,7 @@
 							</tr>
 							<tr>
 								<th>작성일시</th>		
-								<td>${board.resdate }</td>
+								<td>${board.regdate }</td>
 							</tr>
 							<tr>
 								<th>조회수</th>

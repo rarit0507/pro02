@@ -58,7 +58,7 @@
 										<a href="${path2 }/board/detail.do?bno=${dto.bno }">${dto.title }</a>
 										</c:if>  -->
 									</td>
-									<td>${dto.resdate }</td><td>${dto.vcnt }</td>
+									<td>${dto.regdate }</td><td>${dto.vcnt }</td>
 								</tr>
 								</c:forEach>
 							</c:if>

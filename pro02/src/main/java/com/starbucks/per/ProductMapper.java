@@ -1,8 +1,15 @@
 package com.starbucks.per;
 
-import org.apache.ibatis.annotations.Mapper;
+import java.util.List;
 
-@Mapper
+import com.starbucks.domain.Product;
+
 public interface ProductMapper {
-
+	int getTotalCount();
+	List<Product> getProductList();
+	List<Product> getProductCateList(String cate);
+	Product getProduct(int pno);
+	void insProduct(Product product);
+	void upProduct(Product product);
+	void delProduct(int pno);
 }

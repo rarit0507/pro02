@@ -2,31 +2,41 @@
 <!DOCTYPE mapper PUBLIC 
 "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.starbucks.per.BoardMapper">
+<mapper namespace="board">
+	
+	<!-- 총 게시물 수 -->
 	<select id="getTotalCount" resultType="int">
-		select count(*) from board
-	</select>	
+		select COUNT(*) from board
+	</select>
+	
+	<!-- 공지사항 목록 -->
 	<select id="getBoardList" resultType="com.starbucks.domain.Board">
-		select * from board
-	</select>	
-	<select id="getBoard" resultType="com.starbucks.domain.Board">
+		select * from board order by regdate desc
+	</select>
+	
+	<!-- 공지사항 상세 보기 -->	
+	<select id="getBoard" parameterType="int" resultType="com.starbucks.domain.Board">
 		select * from board where bno=#{bno}
-	</select>	
-	<insert id="insBoard">
-		insert into board(title, content)
-		values (#{title}, #{content})
+	</select>
+	
+	<!-- 공지사항 등록 -->
+	<insert id="insBoard" parameterType="com.starbucks.domain.Board">
+		insert into board values (default, #{title}, #{content}, #{author}, 
+		default, default)
 	</insert>
-	<update id="upBoard">
-	    UPDATE board
-	    SET title = #{title}, content = #{content}
-	    WHERE bno = #{bno};
+	
+	<!-- 공지사항 변경 -->
+	<update id="upBoard" parameterType="com.starbucks.domain.Board">
+		update board set title=#{title}, content=#{content} where bno=#{bno}
 	</update>
-	<delete id="delBoard">
+	
+	<!-- 공지사항 조회수 증가 -->
+	<update id="vcntCount" parameterType="int">
+		update board set vcnt=vcnt+1 where bno=#{bno}
+	</update>
+	
+	<!-- 공지사항 삭제 -->
+	<delete id="delBoard" parameterType="int">
 		delete from board where bno=#{bno}
 	</delete>
-	<update id="vcntCount">
-	    UPDATE board
-	    SET vcnt = vcnt + 1
-	    WHERE bno = #{bno};
-	</update>
 </mapper>

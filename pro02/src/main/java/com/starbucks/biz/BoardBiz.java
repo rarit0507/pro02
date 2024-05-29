@@ -5,6 +5,7 @@ import java.util.List;
 import com.starbucks.domain.Board;
 
 public interface BoardBiz {
+	
 	public int getTotalCount();
 	public List<Board> getBoardList();
 	public Board getBoard(int bno);

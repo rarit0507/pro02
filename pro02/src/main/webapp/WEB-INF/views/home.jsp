@@ -9,7 +9,7 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>STARBUCKS</title>
+	<title>MAIN</title>
     <jsp:include page="./include/head.jsp"></jsp:include>
 </head>
 <body>
@@ -22,7 +22,7 @@
 	<main class="contents" id="contents">
 		<section class="page clr-fix" id="page1">
 			<div class="page-wrap">
-				<a href="${path2 }/board/list.do">샘플 목록</a>	
+				
 			</div>
 		</section>	
 	</main>

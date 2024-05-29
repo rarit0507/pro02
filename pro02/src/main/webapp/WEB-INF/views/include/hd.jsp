@@ -26,15 +26,17 @@
                     	About Us
                 	</a>
 					<div class="navbar-dropdown">
-                        <a href="${path1 }/intro/intro2.do" class="navbar-item" title="회사연혁">
+                        <a href="${path1 }/intro/intro2.do" class="navbar-item" title="스타벅스 소개">
                             스타벅스 소개
                         </a>
-                        <a href="${path1 }/intro/intro3.do" class="navbar-item" title="경영이념 및 비전">
+                        <a href="${path1 }/intro/intro3.do" class="navbar-item" title="스타벅스 커피">
                             스타벅스 커피
                         </a>
-                        <a href="${path1 }/intro/intro4.do" class="navbar-item" title="오시는 길">
+                        <a href="${path1 }/intro/intro4.do" class="navbar-item" title="사회 공헌">
                             사회 공헌
-                        </a><a href="${path1 }/intro/intro4.do" class="navbar-item" title="오시는 길">
+                        </a>
+                        <hr class="navbar-divider">
+                        <a href="${path1 }/service/online.do" class="navbar-item">
                             Contact Us
                         </a>
                      </div>   
@@ -44,19 +46,19 @@
 	                    Menu
 	                </a>
 					<div class="navbar-dropdown">
-                        <a href="${path1 }/business/business2.do" class="navbar-item" title="사업 영역">
+                        <a href="${path1 }/business/business2.do" class="navbar-item" title="음료">
                             음료
                         </a>
-                        <a href="${path1 }/business/business3.do" class="navbar-item" title="온라인 사업">
+                        <a href="${path1 }/business/business3.do" class="navbar-item" title="푸드">
                             푸드
                         </a>
-                        <a href="${path1 }/business/business4.do" class="navbar-item" title="해외 사업">
+                        <a href="${path1 }/business/business4.do" class="navbar-item" title="상품">
                             상품
                         </a>
-                        <a href="${path1 }/business/business4.do" class="navbar-item" title="해외 사업">
+                        <a href="${path1 }/business/business4.do" class="navbar-item" title="스타벅스앳홈">
                             스타벅스앳홈
                         </a>
-                        <a href="${path1 }/business/business4.do" class="navbar-item" title="해외 사업">
+                        <a href="${path1 }/business/business4.do" class="navbar-item" title="단체 및 기업 구매">
                             단체 및 기업 구매
                         </a>
                      </div>   
@@ -66,13 +68,13 @@
                         Rewards
                     </a>
                     <div class="navbar-dropdown">
-                        <a href="${path1 }/product/list.do?cate=note" class="navbar-item" title="노트">
+                        <a href="${path1 }/product/list.do?cate=note" class="navbar-item" title="스타벅스 리워드 소개">
                             스타벅스 리워드 소개
                         </a>
-                        <a href="${path1 }/product/list.do?cate=fancy" class="navbar-item" title="팬시">
+                        <a href="${path1 }/product/list.do?cate=fancy" class="navbar-item" title="등급 및 혜택">
                             등급 및 혜택
                         </a>
-                        <a href="${path1 }/product/list.do?cate=pen" class="navbar-item" title="필기류">
+                        <a href="${path1 }/product/list.do?cate=pen" class="navbar-item" title="스타벅스 별">
                             스타벅스 별
                         </a>
                     </div>
@@ -86,24 +88,32 @@
                             실물카드
                         </a>
                         <a href="${path1 }/qna/list.do" class="navbar-item">
-                            스타벅스 모바일 카드
+                            모바일 카드
                         </a>
                         <a href="${path1 }/free/list.do" class="navbar-item">
                             카드 디자인
                         </a>
-                        <a href="${path1 }/file/filelist1.do" class="navbar-item">
-                            Fileboard
+                    </div>    
+                    <div class="navbar-item has-dropdown is-hoverable">
+                    <a href="${path1 }/board/list.do" class="navbar-link">
+                        Gift Cards
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a href="${path1 }/board/list.do" class="navbar-item">
+                            공지사항
                         </a>
-                        <c:if test="${sid.equals('admin')}">
-                        <a href="${path1 }/file/fileupload1.do" class="navbar-item">
-                            FileUpload
+                        <a href="${path1 }/fileboard/list.do?pageNo=1" class="navbar-item">
+                            자료실
                         </a>
-                        </c:if>
-                        <hr class="navbar-divider">
-                        <a href="${path1 }/service/online.do" class="navbar-item">
-                            Contact
+                        <a href="${path1 }/free/list.do" class="navbar-item">
+                            회원게시판
                         </a>
                     </div>
+                    </div>    
+                        
+                        
+                        
+                    
                 </div>
             </div>
 

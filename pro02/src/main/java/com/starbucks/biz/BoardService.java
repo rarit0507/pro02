@@ -56,6 +56,4 @@ public class BoardService implements BoardBiz {
 	public void delBoard(int bno) {
 		boardDAO.delBoard(bno);
 	}
-
-	
 }
