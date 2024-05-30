@@ -20,7 +20,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -151,12 +150,12 @@ public class FreeController {
 	}
 	
 	@PostMapping("updatePro.do")
-	public String upFreePro(@RequestAttribute("free") Free free, Model model) {
+	public String upFreePro(Free free, Model model) {
 		freeService.upFree(free);
 		return "redirect:list.do";
 	}
 	
-	@RequestMapping("delFree.do")
+	@GetMapping("delFree.do")
 	public String delFree(@RequestParam("no") int no, Model model) {
 		freeService.delFree(no);
 		return "redirect:list.do";

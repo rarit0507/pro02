@@ -9,8 +9,9 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>공지사항 글 수정</title>
+	<title>구매하기</title>
 	<jsp:include page="../include/head.jsp"></jsp:include>
+	<script src="${path2}/resources/js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="full-wrap">
@@ -25,58 +26,46 @@
 	    	<nav class="breadcrumb" aria-label="breadcrumbs">
 			  <ul>
 			    <li><a href="${path2 }">Home</a></li>
-			    <li><a href="${path2 }/board/list.do">Notice</a></li>
-			    <li class="is-active"><a href="#" aria-current="page">Edit</a></li>
+			    <li><a href="${path2 }/product/listAll.do">상품</a></li>
+			    <li class="is-active"><a href="#" aria-current="page">구매</a></li>
 			  </ul>
 			</nav>
     	</div>
  	    <section class="page" id="page1">
-    		<h2 class="page-title">공지사항 글 수정</h2>
+    		<h2 class="page-title">상품 구매</h2>
     		<div class="page-wrap">
 	    		<div class="clr-fix">
 	    			<br>
-					<form action="${path2 }/board/updatePro.do" method="post">
+					<form action="${path2 }/sales/insertSalesPro.do" method="post">
 						<table class="table">
 							<tbody>
 								<tr>
-									<th><label for="no">글 번호</label></th>
-									<td>
-										<input type="text" name="no" id="no" class="input" value="${board.bno }" readonly>
-									</td>
-								</tr>
-								<tr>
 									<th><label for="title">제목</label></th>
 									<td>
-										<input type="text" name="title" id="title" class="input" maxlength="100" value="${board.title }" required>
+										<input type="text" name="title" id="title" class="input" maxlength="100" required>
 									</td>
 								</tr>
 								<tr>
 									<th><label for="content">내용</label></th>
 									<td>
-										<textarea name="content" id="content" rows="8" cols="80" class="textarea">${board.content }</textarea>
-									</td>
-								</tr>
-								<tr>
-									<th><label for="resdate">작성 일시</label></th>
-									<td>
-										<input type="text" name="resdate" id="resdate" class="input" value="${board.resdate }" disabled>
-									</td>
-								</tr>
-								<tr>
-									<th><label for="visited">읽은 횟수</label></th>
-									<td>
-										<input type="text" name="visited" id="visited" class="input" value="${board.vcnt }" disabled>
+										<textarea name="content" id="content" rows="8" cols="80" class="textarea"></textarea>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<hr>
 						<div class="buttons">
-						  <button type="submit" class="button is-danger">글 수정</button>
-						  <a href="${path2 }/board/list.do" class="button is-primary">글 목록</a>
-						  <a href="${path2 }/board/detail.do?bno=${board.bno} " class="button is-success">글 상세보기</a>
+						  <button type="submit" class="button is-danger">구매</button>
+						  <a href="${path2 }/product/detail.do?pno=${product.pno }" class="button is-primary">해당 상품</a>
 						</div>
 					</form>
+					<script>
+					$(function(){
+						CKEDITOR.replace('content', {
+							filebrowserUploadUrl : '${path2}/free/fileupload.do'
+						});
+					});
+					</script>
 				</div>
     		</div>
     	</section>

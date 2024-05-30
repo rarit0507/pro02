@@ -10,14 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>공지사항 글 등록</title>
-	<jsp:include page="../include/head.jsp"></jsp:include>
+	<jsp:include page="../../include/head.jsp"></jsp:include>
 </head>
 <body>
 <div class="full-wrap">
     <!-- 헤더 부분 인클루드 -->
     <header id="hd">
     	<div class="container">
-    		<jsp:include page="../include/hd.jsp"></jsp:include>
+    		<jsp:include page="../../include/hd.jsp"></jsp:include>
     	</div>
     </header>
     <main id="contents" class="contents">
@@ -35,7 +35,7 @@
     		<div class="page-wrap">
 	    		<div class="clr-fix">
 	    			<br>
-					<form action="${path2 }/board/insertPro.do" method="post">
+					<form action="${path2 }/admin/insertBoardPro.do" method="post">
 						<table class="table">
 							<tbody>
 								<tr>
@@ -64,7 +64,7 @@
     </main>
     <!-- 푸터 부분 인클루드 -->
     <footer id="ft">
-    	<jsp:include page="../include/ft.jsp"></jsp:include>
+    	<jsp:include page="../../include/ft.jsp"></jsp:include>
     </footer>
     <script>
     $(document).ready(function(){

@@ -10,14 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>상품 정보 수정</title>
-	<jsp:include page="../include/head.jsp"></jsp:include>
+	<jsp:include page="../../include/head.jsp"></jsp:include>
 </head>
 <body>
 <div class="full-wrap">
     <!-- 헤더 부분 인클루드 -->
     <header id="hd">
     	<div class="container">
-    		<jsp:include page="../include/hd.jsp"></jsp:include>
+    		<jsp:include page="../../include/hd.jsp"></jsp:include>
     	</div>
     </header>
     <main id="contents" class="contents">
@@ -35,13 +35,13 @@
     		<div class="page-wrap">
 	    		<div class="clr-fix">
 	    			<br>
-					<form action="${path2 }/product/updatePro.do" method="post" enctype="multipart/form-data">
+					<form action="${path2 }/admin/updateProductPro.do" method="post" enctype="multipart/form-data">
 						<table class="table">
 							<tbody>
 								<tr>
 									<th><label for="cate">카테고리</label></th>
 									<td>
-                                        <select name="cate" id="cate" required>
+                                        <select name="cate" id="cate" class="select" required>
                                             <option value="">선택 안함</option>
                                             <option value="note" ${product.cate == 'note' ? 'selected' : ''}>노트</option>
                                             <option value="fancy" ${product.cate == 'fancy' ? 'selected' : ''}>팬시</option>
@@ -73,21 +73,21 @@
 								<tr>
 									<th><label for="img">상품 메인이미지</label></th>
 									<td>
-										<input type="file" name="img" id="img" accept="image/*" value="${product.img }" />
+										<input type="file" name="img" id="img" accept="image/*" class="input" value="${product.img }" />
 										<br>현재 이미지: <img src="${path2}/uploads/${product.img}" width="100">
 									</td>
 								</tr>
 								<tr>
 									<th><label for="img">상품 상세 이미지</label></th>
 									<td>
-										<input type="file" name="img2" id="img2" accept="image/*" value="${product.img2 }"/>
+										<input type="file" name="img2" id="img2" accept="image/*" class="input" value="${product.img2 }"/>
 										<br>현재 이미지: <img src="${path2}/uploads/${product.img2}" width="100">
 									</td>
 								</tr>
 								<tr>
 									<th><label for="img">상품 썸네일 이미지</label></th>
 									<td>
-										<input type="file" name="img3" id="img3" accept="image/*" value="${product.img3 }" />
+										<input type="file" name="img3" id="img3" accept="image/*" class="input" value="${product.img3 }" />
 										<br>현재 이미지: <img src="${path2}/uploads/${product.img3}" width="100">
 									</td>
 								</tr>
@@ -96,7 +96,8 @@
 						<hr>
 						<div class="buttons">
 						  <button type="submit" class="button is-danger">상품 등록</button>
-						  <a href="${path2 }/product/list.do" class="button is-primary">상품 목록</a>
+						  <a href="${path2}/admin/insertInventory.do" class="button is-light">상품 입고</a>
+						  <a href="${path2 }/product/list.do&cate=${product.cate }" class="button is-primary">상품 목록</a>
 						  <a href="${path2 }/product/detail.do?pno=${product.pno} " class="button is-success">상품 정보 상세보기</a>
 						</div>
 					</form>
@@ -106,7 +107,7 @@
     </main>
     <!-- 푸터 부분 인클루드 -->
     <footer id="ft">
-    	<jsp:include page="../include/ft.jsp"></jsp:include>
+    	<jsp:include page="../../include/ft.jsp"></jsp:include>
     </footer>
     <script>
     $(document).ready(function(){

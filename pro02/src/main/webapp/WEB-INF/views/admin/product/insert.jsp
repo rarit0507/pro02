@@ -10,14 +10,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>상품 등록</title>
-	<jsp:include page="../include/head.jsp"></jsp:include>
+	<jsp:include page="../../include/head.jsp"></jsp:include>
+	<style>
+	.buttons { clear:both; margin-top:24px; margin-bottom:24px; }
+	</style>
 </head>
 <body>
 <div class="full-wrap">
     <!-- 헤더 부분 인클루드 -->
     <header id="hd">
     	<div class="container">
-    		<jsp:include page="../include/hd.jsp"></jsp:include>
+    		<jsp:include page="../../include/hd.jsp"></jsp:include>
     	</div>
     </header>
     <main id="contents" class="contents">
@@ -26,23 +29,21 @@
 			  <ul>
 			    <li><a href="${path2 }">Home</a></li>
 			    <li><a href="${path2 }/product/list.do">상품</a></li>
-			    <li class="is-active"><a href="#" aria-current="page">상품 등록</a></li>
+			    <li>상품 등록</li>
 			  </ul>
 			</nav>
     	</div>
- 	    <section class="page" id="page1">
+ 	    <section class="contain" id="page1">
     		<h2 class="page-title">상품 등록</h2>
     		<div class="page-wrap">
-	    		<div class="clr-fix">
-	    			<br>
-					<form action="${path2 }/product/insertPro.do" method="post" enctype="multipart/form-data">
-						<table class="table">
+	    		<div class="clr-fix" style="clear:both;">
+					<form action="${path2 }/admin/insertProductPro.do" method="post" enctype="multipart/form-data">
+						<table class="table" id="tb1">
 							<tbody>
 								<tr>
-									<th><label for="cate">카테고리</label></th>
+									<th>카테고리</th>
 									<td>
-										<select name="cate" id="cate" required>
-											<option value="">선택 안함</option>
+										<select name="cate" id="cate" class="select">
 											<option value="note">노트</option>
 											<option value="fancy">팬시</option>
 											<option value="pen">필기구</option>
@@ -70,29 +71,29 @@
 									</td>
 								</tr>
 								<tr>
-									<th><label for="img">상품 메인이미지</label></th>
+									<th>상품 메인이미지</th>
 									<td>
-										<input type="file" name="img" id="img" accept="image/*" required/>
+										<input type="file" name="img" id="img" accept="image/*" class="input" required />
 									</td>
 								</tr>
 								<tr>
-									<th><label for="img">상품 상세 이미지</label></th>
+									<th>상품 상세 이미지</th>
 									<td>
-										<input type="file" name="img2" id="img2" accept="image/*" required/>
+										<input type="file" name="img2" id="img2" accept="image/*" class="input" required />
 									</td>
 								</tr>
 								<tr>
-									<th><label for="img">상품 썸네일 이미지</label></th>
+									<th>상품 썸네일 이미지</th>
 									<td>
-										<input type="file" name="img3" id="img3" accept="image/*" required/>
+										<input type="file" name="img3" id="img3" accept="image/*" class="input" required />
 									</td>
 								</tr>
 							</tbody>
 						</table>
 						<hr>
 						<div class="buttons">
-						  <button type="submit" class="button is-danger">상품 등록</button>
-						  <a href="${path2 }/product/list.do" class="button is-primary">상품 목록</a>
+						  <input type="submit" value="상품 등록" class="button is-danger">
+						  <a href="${path2 }/product/list.do?cate=note" class="button is-primary">상품 목록</a>
 						</div>
 					</form>
 				</div>
@@ -101,13 +102,8 @@
     </main>
     <!-- 푸터 부분 인클루드 -->
     <footer id="ft">
-    	<jsp:include page="../include/ft.jsp"></jsp:include>
+    	<jsp:include page="../../include/ft.jsp"></jsp:include>
     </footer>
-    <script>
-    $(document).ready(function(){
-    	$("#tb1_length, #tb1_filter").css("margin-bottom", "20px");
-    });
-    </script>
 </div>    
 </body>
 </html>

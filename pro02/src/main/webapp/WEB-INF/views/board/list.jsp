@@ -50,15 +50,14 @@
 								<tr>
 									<td>${dto.bno }</td>
 									<td>
-										<a href="${path2 }/board/detail.do?bno=${dto.bno }">${dto.title }</a>
-<!-- 									<c:if test="${empty cus }">
-										<strong>${dto.title }</strong>
+ 										<c:if test="${empty cus }">
+											<strong>${dto.title }</strong>
 										</c:if>
 										<c:if test="${not empty cus }">
-										<a href="${path2 }/board/detail.do?bno=${dto.bno }">${dto.title }</a>
-										</c:if>  -->
+											<a href="${path2 }/board/detail.do?bno=${dto.bno }">${dto.title }</a>
+										</c:if>
 									</td>
-									<td>${dto.regdate }</td><td>${dto.vcnt }</td>
+									<td>${dto.resdate }</td><td>${dto.vcnt }</td>
 								</tr>
 								</c:forEach>
 							</c:if>
@@ -79,7 +78,7 @@
 					<hr>
 					<c:if test="${cus.id.equals('admin') }">
 					<div class="buttons">
-					  <a href="${path2 }/board/insert.do" class="button is-danger">글 등록</a>
+					  <a href="${path2 }/admin/insertBoard.do" class="button is-danger">글 등록</a>
 					</div>
 					</c:if>
 				</div>
